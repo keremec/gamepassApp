@@ -30,9 +30,9 @@ class Homepage: UIViewController {
         
         let heroDesign = UICollectionViewFlowLayout()
         heroDesign.scrollDirection = .horizontal
-        let height = HeroCollectionView.frame.size.width
-        heroDesign.sectionInset = UIEdgeInsets(top: 10, left: 30, bottom: 10, right: 30)
-        heroDesign.itemSize = CGSize(width: height * 0.85, height: height * 0.6)
+        let width = self.view.frame.size.width
+        heroDesign.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
+        heroDesign.itemSize = CGSize(width: width * 0.85, height: width * 0.6)
         HeroCollectionView.isPagingEnabled = true
         HeroCollectionView.collectionViewLayout = heroDesign
         
