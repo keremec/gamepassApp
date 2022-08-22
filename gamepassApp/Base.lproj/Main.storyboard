@@ -118,16 +118,65 @@
                                                     <segment title="PC"/>
                                                 </segments>
                                             </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pY4-Vi-uvT">
+                                                <rect key="frame" x="20" y="336" width="140" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fS4-Ku-bjs">
+                                                <rect key="frame" x="0.0" y="380" width="414" height="275"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="275" id="H6a-gc-iEh"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m3g-bC-cAT">
+                                                    <size key="itemSize" width="200" height="275"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="capsuleCell" id="IMv-aU-P9K" customClass="CapsuleCollectionViewCell" customModule="gamepassApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="275"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bF7-mn-Udq">
+                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="275"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cyberpunk2077-b" translatesAutoresizingMaskIntoConstraints="NO" id="hsN-ER-iG4">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="275"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="hsN-ER-iG4" firstAttribute="leading" secondItem="bF7-mn-Udq" secondAttribute="leading" id="G4F-VC-UJZ"/>
+                                                                <constraint firstAttribute="bottom" secondItem="hsN-ER-iG4" secondAttribute="bottom" id="I5L-Jv-3uh"/>
+                                                                <constraint firstItem="hsN-ER-iG4" firstAttribute="top" secondItem="bF7-mn-Udq" secondAttribute="top" id="b4G-DM-ZZi"/>
+                                                                <constraint firstAttribute="trailing" secondItem="hsN-ER-iG4" secondAttribute="trailing" id="raZ-77-TYi"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="200" height="275"/>
+                                                        <connections>
+                                                            <outlet property="capsuleImage" destination="hsN-ER-iG4" id="8Pk-Ey-ZQu"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="pY4-Vi-uvT" firstAttribute="top" secondItem="Bvf-yj-MKh" secondAttribute="bottom" constant="25" id="7FR-cI-ZoF"/>
                                             <constraint firstItem="Bvf-yj-MKh" firstAttribute="leading" secondItem="PXv-eY-oEb" secondAttribute="leading" constant="50" id="F7e-HI-3pZ"/>
                                             <constraint firstItem="Zcc-hS-IpM" firstAttribute="leading" secondItem="PXv-eY-oEb" secondAttribute="leading" id="HpC-hc-cRc"/>
                                             <constraint firstItem="Bvf-yj-MKh" firstAttribute="top" secondItem="Zcc-hS-IpM" secondAttribute="bottom" constant="19" id="Mge-Xn-GRQ"/>
                                             <constraint firstAttribute="trailing" secondItem="Bvf-yj-MKh" secondAttribute="trailing" constant="50" id="YBe-h8-sAM"/>
+                                            <constraint firstAttribute="trailing" secondItem="fS4-Ku-bjs" secondAttribute="trailing" id="YIm-zQ-xAl"/>
+                                            <constraint firstItem="fS4-Ku-bjs" firstAttribute="leading" secondItem="PXv-eY-oEb" secondAttribute="leading" id="Z0I-yW-30a"/>
+                                            <constraint firstItem="pY4-Vi-uvT" firstAttribute="leading" secondItem="PXv-eY-oEb" secondAttribute="leading" constant="20" id="Zvb-o2-icW"/>
                                             <constraint firstAttribute="trailing" secondItem="Zcc-hS-IpM" secondAttribute="trailing" id="bau-pK-Vtz"/>
                                             <constraint firstItem="Zcc-hS-IpM" firstAttribute="top" secondItem="PXv-eY-oEb" secondAttribute="top" constant="5" id="ivK-SI-46F"/>
                                             <constraint firstAttribute="height" constant="1000" id="kDw-4k-Ddg"/>
+                                            <constraint firstItem="fS4-Ku-bjs" firstAttribute="top" secondItem="pY4-Vi-uvT" secondAttribute="bottom" constant="15" id="t0D-Mq-8pZ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -161,6 +210,7 @@
                     </view>
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="tCG-mC-ZkJ"/>
                     <connections>
+                        <outlet property="CapsuleCollectionView" destination="fS4-Ku-bjs" id="7BU-R2-HY6"/>
                         <outlet property="HeroCollectionView" destination="Zcc-hS-IpM" id="Dsw-54-E9a"/>
                     </connections>
                 </viewController>
@@ -313,6 +363,7 @@
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="books.vertical" catalog="system" width="128" height="107"/>
         <image name="books.vertical.fill" catalog="system" width="128" height="109"/>
+        <image name="cyberpunk2077-b" width="800" height="1200"/>
         <image name="cybertest" width="1024" height="1024"/>
         <image name="gamepasslogo" width="249" height="60"/>
         <image name="house" catalog="system" width="128" height="106"/>
