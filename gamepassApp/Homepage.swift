@@ -61,10 +61,10 @@ class Homepage: UIViewController {
         
         let capsuleDesign = UICollectionViewFlowLayout()
         capsuleDesign.scrollDirection = .horizontal
-        capsuleDesign.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        capsuleDesign.sectionInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
         capsuleDesign.itemSize = CGSize(width: width * 0.44, height: width * 0.65)
-        capsuleDesign.minimumLineSpacing = 10
-        HeroCollectionView.isPagingEnabled = false
+        capsuleDesign.minimumLineSpacing = 15
+        CapsuleCollectionView.isPagingEnabled = false
         CapsuleCollectionView.collectionViewLayout = capsuleDesign
     }
 

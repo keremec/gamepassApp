@@ -42,7 +42,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXv-eY-oEb">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zcc-hS-IpM">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zcc-hS-IpM">
                                                 <rect key="frame" x="0.0" y="5" width="414" height="256"/>
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <constraints>
@@ -163,13 +163,23 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4Q-tg-aaG">
+                                                <rect key="frame" x="332" y="339.5" width="77" height="30.5"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="View All">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                                </buttonConfiguration>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="G4Q-tg-aaG" secondAttribute="trailing" constant="5" id="3o6-Sz-UTZ"/>
                                             <constraint firstItem="pY4-Vi-uvT" firstAttribute="top" secondItem="Bvf-yj-MKh" secondAttribute="bottom" constant="25" id="7FR-cI-ZoF"/>
                                             <constraint firstItem="Bvf-yj-MKh" firstAttribute="leading" secondItem="PXv-eY-oEb" secondAttribute="leading" constant="50" id="F7e-HI-3pZ"/>
                                             <constraint firstItem="Zcc-hS-IpM" firstAttribute="leading" secondItem="PXv-eY-oEb" secondAttribute="leading" id="HpC-hc-cRc"/>
                                             <constraint firstItem="Bvf-yj-MKh" firstAttribute="top" secondItem="Zcc-hS-IpM" secondAttribute="bottom" constant="19" id="Mge-Xn-GRQ"/>
+                                            <constraint firstItem="fS4-Ku-bjs" firstAttribute="top" secondItem="G4Q-tg-aaG" secondAttribute="bottom" constant="10" id="XAs-GZ-10z"/>
                                             <constraint firstAttribute="trailing" secondItem="Bvf-yj-MKh" secondAttribute="trailing" constant="50" id="YBe-h8-sAM"/>
                                             <constraint firstAttribute="trailing" secondItem="fS4-Ku-bjs" secondAttribute="trailing" id="YIm-zQ-xAl"/>
                                             <constraint firstItem="fS4-Ku-bjs" firstAttribute="leading" secondItem="PXv-eY-oEb" secondAttribute="leading" id="Z0I-yW-30a"/>
