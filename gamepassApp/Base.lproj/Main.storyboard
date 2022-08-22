@@ -117,6 +117,7 @@
                                                     <segment title="CONSOLE"/>
                                                     <segment title="PC"/>
                                                 </segments>
+                                                <color key="selectedSegmentTintColor" red="0.062745098039215685" green="0.48627450980392156" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pY4-Vi-uvT">
                                                 <rect key="frame" x="20" y="336" width="140" height="29"/>
