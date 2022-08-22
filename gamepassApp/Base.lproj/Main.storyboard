@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -40,8 +41,92 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXv-eY-oEb">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zcc-hS-IpM">
+                                                <rect key="frame" x="0.0" y="5" width="414" height="256"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="256" id="Kan-ly-8tY"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="5YW-9e-NmN">
+                                                    <size key="itemSize" width="306" height="256"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="30" minY="10" maxX="30" maxY="10"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="heroCell" id="QrF-Wv-AJU" customClass="HeroCollectionViewCell" customModule="gamepassApp" customModuleProvider="target">
+                                                        <rect key="frame" x="30" y="10" width="306" height="236"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="udb-8y-ftz">
+                                                            <rect key="frame" x="0.0" y="0.0" width="306" height="236"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cybertest" translatesAutoresizingMaskIntoConstraints="NO" id="zOa-Iw-I9o">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="306" height="236"/>
+                                                                </imageView>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jub-hg-Scq">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="306" height="236"/>
+                                                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="tinted">
+                                                                        <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mainText" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjJ-sW-lKa">
+                                                                    <rect key="frame" x="20" y="160" width="94" height="30"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" subText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDd-QY-TBv">
+                                                                    <rect key="frame" x="20" y="195" width="63" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="linkColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="HDd-QY-TBv" firstAttribute="leading" secondItem="udb-8y-ftz" secondAttribute="leading" constant="20" id="30x-tl-8nG"/>
+                                                                <constraint firstItem="zOa-Iw-I9o" firstAttribute="leading" secondItem="udb-8y-ftz" secondAttribute="leading" id="3We-9n-tL5"/>
+                                                                <constraint firstItem="zOa-Iw-I9o" firstAttribute="top" secondItem="udb-8y-ftz" secondAttribute="top" id="7Fi-mb-5RB"/>
+                                                                <constraint firstItem="Jub-hg-Scq" firstAttribute="leading" secondItem="udb-8y-ftz" secondAttribute="leading" id="AiR-Pa-Og0"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Jub-hg-Scq" secondAttribute="trailing" id="BRd-18-edp"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Jub-hg-Scq" secondAttribute="bottom" id="By5-gz-HjD"/>
+                                                                <constraint firstAttribute="bottom" secondItem="zOa-Iw-I9o" secondAttribute="bottom" id="QGf-Wc-kI1"/>
+                                                                <constraint firstItem="QjJ-sW-lKa" firstAttribute="leading" secondItem="udb-8y-ftz" secondAttribute="leading" constant="20" id="XYg-sD-oYM"/>
+                                                                <constraint firstItem="HDd-QY-TBv" firstAttribute="top" secondItem="QjJ-sW-lKa" secondAttribute="bottom" constant="5" id="n6B-da-9po"/>
+                                                                <constraint firstItem="Jub-hg-Scq" firstAttribute="top" secondItem="udb-8y-ftz" secondAttribute="top" id="qV4-CI-e5a"/>
+                                                                <constraint firstAttribute="trailing" secondItem="zOa-Iw-I9o" secondAttribute="trailing" id="vnI-Pm-Cxd"/>
+                                                                <constraint firstItem="QjJ-sW-lKa" firstAttribute="top" secondItem="udb-8y-ftz" secondAttribute="top" constant="160" id="yC3-Pr-3ZK"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="306" height="236"/>
+                                                        <connections>
+                                                            <outlet property="heroImage" destination="zOa-Iw-I9o" id="2UC-hb-ixo"/>
+                                                            <outlet property="mainText" destination="QjJ-sW-lKa" id="y4O-WB-3sg"/>
+                                                            <outlet property="subText" destination="HDd-QY-TBv" id="mAl-RI-jYi"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bvf-yj-MKh">
+                                                <rect key="frame" x="50" y="280" width="314" height="32"/>
+                                                <segments>
+                                                    <segment title="CONSOLE"/>
+                                                    <segment title="PC"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="Bvf-yj-MKh" firstAttribute="leading" secondItem="PXv-eY-oEb" secondAttribute="leading" constant="50" id="F7e-HI-3pZ"/>
+                                            <constraint firstItem="Zcc-hS-IpM" firstAttribute="leading" secondItem="PXv-eY-oEb" secondAttribute="leading" id="HpC-hc-cRc"/>
+                                            <constraint firstItem="Bvf-yj-MKh" firstAttribute="top" secondItem="Zcc-hS-IpM" secondAttribute="bottom" constant="19" id="Mge-Xn-GRQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bvf-yj-MKh" secondAttribute="trailing" constant="50" id="YBe-h8-sAM"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zcc-hS-IpM" secondAttribute="trailing" id="bau-pK-Vtz"/>
+                                            <constraint firstItem="Zcc-hS-IpM" firstAttribute="top" secondItem="PXv-eY-oEb" secondAttribute="top" constant="5" id="ivK-SI-46F"/>
                                             <constraint firstAttribute="height" constant="1000" id="kDw-4k-Ddg"/>
                                         </constraints>
                                     </view>
@@ -75,6 +160,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="tCG-mC-ZkJ"/>
+                    <connections>
+                        <outlet property="HeroCollectionView" destination="Zcc-hS-IpM" id="Dsw-54-E9a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,6 +274,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="eI0-9N-h0m" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AIO-LE-wWc">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" systemColor="labelColor"/>
@@ -224,6 +313,7 @@
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="books.vertical" catalog="system" width="128" height="107"/>
         <image name="books.vertical.fill" catalog="system" width="128" height="109"/>
+        <image name="cybertest" width="1024" height="1024"/>
         <image name="gamepasslogo" width="249" height="60"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
@@ -232,6 +322,9 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
