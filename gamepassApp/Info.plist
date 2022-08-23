@@ -7,8 +7,6 @@
 		<string>Bahnschrift.ttf</string>
 		<string>SegoeUI-VF.ttf</string>
 	</array>
-	<key>UIUserInterfaceStyle</key>
-	<string>Dark</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
