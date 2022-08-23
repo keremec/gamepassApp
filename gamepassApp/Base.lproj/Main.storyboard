@@ -48,7 +48,7 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="1307"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXv-eY-oEb">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1090"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zcc-hS-IpM">
                                                 <rect key="frame" x="0.0" y="5" width="414" height="256"/>
@@ -258,7 +258,7 @@
                                             <constraint firstItem="pY4-Vi-uvT" firstAttribute="leading" secondItem="PXv-eY-oEb" secondAttribute="leading" constant="20" id="Zvb-o2-icW"/>
                                             <constraint firstAttribute="trailing" secondItem="Zcc-hS-IpM" secondAttribute="trailing" id="bau-pK-Vtz"/>
                                             <constraint firstItem="Zcc-hS-IpM" firstAttribute="top" secondItem="PXv-eY-oEb" secondAttribute="top" constant="5" id="ivK-SI-46F"/>
-                                            <constraint firstAttribute="height" constant="1500" id="kDw-4k-Ddg"/>
+                                            <constraint firstAttribute="height" constant="1090" id="kDw-4k-Ddg"/>
                                             <constraint firstItem="fS4-Ku-bjs" firstAttribute="top" secondItem="pY4-Vi-uvT" secondAttribute="bottom" constant="15" id="t0D-Mq-8pZ"/>
                                         </constraints>
                                     </view>

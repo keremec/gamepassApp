@@ -27,8 +27,8 @@ class Homepage: UIViewController {
         
         HeroCollectionView.delegate = self
         HeroCollectionView.dataSource = self
-        let h1 = Heros(heroId: 1, heroTitle: "Control", heroDesc: "Play Now", heroImgName: "control-b")
-        let h2 = Heros(heroId: 2, heroTitle: "Requiem", heroDesc: "A Plague Tale", heroImgName: "plague-b")
+        let h1 = Heros(heroId: 1, heroTitle: "Shadow of the Tomb Raider", heroDesc: "Become the Tomb Raider", heroImgName: "tombraider-b")
+        let h2 = Heros(heroId: 2, heroTitle: "Control", heroDesc: "Ultimate Edition", heroImgName: "control-b")
 
         
         HeroList.append(h1)
@@ -51,14 +51,18 @@ class Homepage: UIViewController {
         let c3 = Capsules(capsuleId: 3, capsuleTitle: "Call of Duty Modern Warfare 2", capsuleDesc: "game", capsuleImgName: "codmw2-b")
         let c4 = Capsules(capsuleId: 4, capsuleTitle: "The Invincible", capsuleDesc: "Dark Future", capsuleImgName: "invincible-b")
         let c5 = Capsules(capsuleId: 5, capsuleTitle: "Death Stranding", capsuleDesc: "Space Awaits", capsuleImgName: "ds-b")
-
-
+        let c6 = Capsules(capsuleId: 6, capsuleTitle: "Deathloop", capsuleDesc: "Lorem", capsuleImgName: "deathloop-b")
+        let c7 = Capsules(capsuleId: 7, capsuleTitle: "Life is Strange True Colors", capsuleDesc: "Lorem", capsuleImgName: "lis-b")
+        let c8 = Capsules(capsuleId: 8, capsuleTitle: "A Plague Tale Requiem", capsuleDesc: "Lorem", capsuleImgName: "plague-b")
         
         CapsuleList.append(c1)
         CapsuleList.append(c2)
         CapsuleList.append(c3)
         CapsuleList.append(c4)
         CapsuleList.append(c5)
+        CapsuleList.append(c6)
+        CapsuleList.append(c7)
+        CapsuleList.append(c8)
 
         
         
