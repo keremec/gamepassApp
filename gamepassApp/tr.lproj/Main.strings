@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "Library"; ObjectID = "0DK-uQ-SGQ"; */
+"0DK-uQ-SGQ.text" = "Library";
+
+/* Class = "UISegmentedControl"; Bvf-yj-MKh.segmentTitles[0] = "CONSOLE"; ObjectID = "Bvf-yj-MKh"; */
+"Bvf-yj-MKh.segmentTitles[0]" = "KONSOL";
+
+/* Class = "UISegmentedControl"; Bvf-yj-MKh.segmentTitles[1] = "PC"; ObjectID = "Bvf-yj-MKh"; */
+"Bvf-yj-MKh.segmentTitles[1]" = "PC";
+
+/* Class = "UIButton"; configuration.title = "View All"; ObjectID = "G4Q-tg-aaG"; */
+"G4Q-tg-aaG.configuration.title" = "Tümünü Gör";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "G4Q-tg-aaG"; */
+"G4Q-tg-aaG.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = " subText"; ObjectID = "HDd-QY-TBv"; */
+"HDd-QY-TBv.text" = " subText";
+
+/* Class = "UILabel"; text = "Profile"; ObjectID = "JIe-Xc-QQP"; */
+"JIe-Xc-QQP.text" = "Profile";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Jub-hg-Scq"; */
+"Jub-hg-Scq.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "mainText"; ObjectID = "QjJ-sW-lKa"; */
+"QjJ-sW-lKa.text" = "mainText";
+
+/* Class = "UILabel"; text = "Search"; ObjectID = "TTo-2s-1F6"; */
+"TTo-2s-1F6.text" = "Search";
+
+/* Class = "UILabel"; text = "Test Category"; ObjectID = "evL-7V-D7J"; */
+"evL-7V-D7J.text" = "Test Category";
+
+/* Class = "UILabel"; text = "Coming Soon"; ObjectID = "pY4-Vi-uvT"; */
+"pY4-Vi-uvT.text" = "Çok Yakında";

@@ -46,6 +46,8 @@
 		0CEDECAC28B4E906001A406C /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		0CEDECB028B4FDC8001A406C /* Bahnschrift.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bahnschrift.ttf; sourceTree = "<group>"; };
 		0CEDECB128B4FDC8001A406C /* SegoeUI-VF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SegoeUI-VF.ttf"; sourceTree = "<group>"; };
+		0CEDECB728B51C87001A406C /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		0CEDECB828B51C87001A406C /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = 0CE0607F28B2332D0067E853;
 			productRefGroup = 0CE0608928B2332D0067E853 /* Products */;
@@ -243,6 +246,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0CE0609228B2332D0067E853 /* Base */,
+				0CEDECB728B51C87001A406C /* tr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -251,6 +255,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0CE0609728B2332E0067E853 /* Base */,
+				0CEDECB828B51C87001A406C /* tr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -322,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

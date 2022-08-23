@@ -22,13 +22,23 @@ class Homepage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let width = self.view.frame.size.width
+        let language = NSLocale.preferredLanguages[0]
         
         // Hero Collection View
         
         HeroCollectionView.delegate = self
         HeroCollectionView.dataSource = self
-        let h1 = Heros(heroId: 1, heroTitle: "Shadow of the Tomb Raider", heroDesc: "Become the Tomb Raider", heroImgName: "tombraider-b")
-        let h2 = Heros(heroId: 2, heroTitle: "Control", heroDesc: "Ultimate Edition", heroImgName: "control-b")
+        
+        var tombraiderDesc = "Become the Tomb Raider"
+        var controlgameDesc = "Uncover the mysteries"
+        
+        if language.hasPrefix("tr") {
+            tombraiderDesc = "Hayatta ve Ayakta Kal"
+            controlgameDesc = "Gizemleri ortaya çıkar"
+        }
+        
+        let h1 = Heros(heroId: 1, heroTitle: "Shadow of the Tomb Raider", heroDesc: tombraiderDesc, heroImgName: "tombraider-b")
+        let h2 = Heros(heroId: 2, heroTitle: "Control", heroDesc: controlgameDesc, heroImgName: "control-b")
 
         
         HeroList.append(h1)
@@ -78,14 +88,36 @@ class Homepage: UIViewController {
         // Category Collection View
         CategoryCollectionView.delegate = self
         CategoryCollectionView.dataSource = self
-        let cat1 = Categories(CategoryId: 1, CategoryTitle: "INDIE",CategoryColor: "#008745ff", CategoryImgName: "tips_and_updates-tips_and_updates_symbol")
-        let cat2 = Categories(CategoryId: 2, CategoryTitle: "FAMILY",CategoryColor: "#008745ff", CategoryImgName: "family_restroom-family_restroom_symbol")
-        let cat3 = Categories(CategoryId: 3, CategoryTitle: "CLASSICS",CategoryColor: "#038572ff", CategoryImgName: "videogame_asset-videogame_asset_symbol")
-        let cat4 = Categories(CategoryId: 4, CategoryTitle: "SHOOTER",CategoryColor: "#038572ff", CategoryImgName: "adjust-adjust_symbol")
-        let cat5 = Categories(CategoryId: 5, CategoryTitle: "SPORTS",CategoryColor: "#007c8eff", CategoryImgName: "sports_football-sports_football_symbol")
-        let cat6 = Categories(CategoryId: 6, CategoryTitle: "ADVENTURE",CategoryColor: "#007c8eff", CategoryImgName: "sailing-sailing_symbol")
-        let cat7 = Categories(CategoryId: 7, CategoryTitle: "PLATFORM",CategoryColor: "#006f98ff", CategoryImgName: "nature-nature_symbol")
-        let cat8 = Categories(CategoryId: 8, CategoryTitle: "FIGHTING",CategoryColor: "#006f98ff", CategoryImgName: "sports_mma-sports_mma_symbol")
+        
+        var catName1 = "INDIE"
+        var catName2 = "FAMILY"
+        var catName3 = "CLASSICS"
+        var catName4 = "SHOOTER"
+        var catName5 = "SPORTS"
+        var catName6 = "ADVENTURE"
+        var catName7 = "PLATFORM"
+        var catName8 = "FIGHTING"
+        
+        if language.hasPrefix("tr") {
+            catName1 = "BAĞIMSIZ"
+            catName2 = "AİLE"
+            catName3 = "KLASİKLER"
+            catName4 = "NİŞANCI"
+            catName5 = "SPOR"
+            catName6 = "MACERA"
+            catName7 = "PLATFORM"
+            catName8 = "DÖVÜŞ"
+        }
+        
+        
+        let cat1 = Categories(CategoryId: 1, CategoryTitle: catName1,CategoryColor: "#008745ff", CategoryImgName: "tips_and_updates-tips_and_updates_symbol")
+        let cat2 = Categories(CategoryId: 2, CategoryTitle: catName2,CategoryColor: "#008745ff", CategoryImgName: "family_restroom-family_restroom_symbol")
+        let cat3 = Categories(CategoryId: 3, CategoryTitle: catName3,CategoryColor: "#038572ff", CategoryImgName: "videogame_asset-videogame_asset_symbol")
+        let cat4 = Categories(CategoryId: 4, CategoryTitle: catName4,CategoryColor: "#038572ff", CategoryImgName: "adjust-adjust_symbol")
+        let cat5 = Categories(CategoryId: 5, CategoryTitle: catName5,CategoryColor: "#007c8eff", CategoryImgName: "sports_football-sports_football_symbol")
+        let cat6 = Categories(CategoryId: 6, CategoryTitle: catName6,CategoryColor: "#007c8eff", CategoryImgName: "sailing-sailing_symbol")
+        let cat7 = Categories(CategoryId: 7, CategoryTitle: catName7,CategoryColor: "#006f98ff", CategoryImgName: "nature-nature_symbol")
+        let cat8 = Categories(CategoryId: 8, CategoryTitle: catName8,CategoryColor: "#006f98ff", CategoryImgName: "sports_mma-sports_mma_symbol")
 
         let categoryDesign = UICollectionViewFlowLayout()
         categoryDesign.scrollDirection = .vertical
