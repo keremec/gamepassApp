@@ -20,6 +20,10 @@
 		0CE0609328B2332D0067E853 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE0609128B2332D0067E853 /* Main.storyboard */; };
 		0CE0609528B2332E0067E853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE0609428B2332E0067E853 /* Assets.xcassets */; };
 		0CE0609828B2332E0067E853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE0609628B2332E0067E853 /* LaunchScreen.storyboard */; };
+		0CEDECAB28B4E8F2001A406C /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEDECAA28B4E8F2001A406C /* Categories.swift */; };
+		0CEDECAD28B4E906001A406C /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEDECAC28B4E906001A406C /* CategoryCollectionViewCell.swift */; };
+		0CEDECB428B4FDC8001A406C /* Bahnschrift.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CEDECB028B4FDC8001A406C /* Bahnschrift.ttf */; };
+		0CEDECB528B4FDC8001A406C /* SegoeUI-VF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CEDECB128B4FDC8001A406C /* SegoeUI-VF.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		0CE0609428B2332E0067E853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CE0609728B2332E0067E853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CE0609928B2332E0067E853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CEDECAA28B4E8F2001A406C /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		0CEDECAC28B4E906001A406C /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		0CEDECB028B4FDC8001A406C /* Bahnschrift.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bahnschrift.ttf; sourceTree = "<group>"; };
+		0CEDECB128B4FDC8001A406C /* SegoeUI-VF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SegoeUI-VF.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,20 +80,72 @@
 			children = (
 				0CE0608B28B2332D0067E853 /* AppDelegate.swift */,
 				0CE0608D28B2332D0067E853 /* SceneDelegate.swift */,
-				0C25D70228B2362500906CE9 /* Searchpage.swift */,
-				0C25D70828B255B700906CE9 /* Homepage.swift */,
-				0C3CE14228B3B3DC00F117AA /* Heros.swift */,
-				0C7D7E2B28B3FD3D00344CAB /* Capsules.swift */,
-				0C3CE14028B3B1B200F117AA /* HeroCollectionViewCell.swift */,
-				0C7D7E2D28B3FD9C00344CAB /* CapsuleCollectionViewCell.swift */,
-				0C25D70428B2363900906CE9 /* Librarypage.swift */,
-				0C25D70628B2364F00906CE9 /* Profilepage.swift */,
+				0CEDECAE28B4FD93001A406C /* fonts */,
+				0CEDECA828B4E8A1001A406C /* Components */,
+				0CEDECA628B4E844001A406C /* Pages */,
 				0CE0609128B2332D0067E853 /* Main.storyboard */,
 				0CE0609428B2332E0067E853 /* Assets.xcassets */,
 				0CE0609628B2332E0067E853 /* LaunchScreen.storyboard */,
 				0CE0609928B2332E0067E853 /* Info.plist */,
 			);
 			path = gamepassApp;
+			sourceTree = "<group>";
+		};
+		0CEDECA528B4E7C4001A406C /* CapsuleViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C7D7E2B28B3FD3D00344CAB /* Capsules.swift */,
+				0C7D7E2D28B3FD9C00344CAB /* CapsuleCollectionViewCell.swift */,
+			);
+			name = CapsuleViewCell;
+			sourceTree = "<group>";
+		};
+		0CEDECA628B4E844001A406C /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				0C25D70828B255B700906CE9 /* Homepage.swift */,
+				0C25D70228B2362500906CE9 /* Searchpage.swift */,
+				0C25D70428B2363900906CE9 /* Librarypage.swift */,
+				0C25D70628B2364F00906CE9 /* Profilepage.swift */,
+			);
+			name = Pages;
+			sourceTree = "<group>";
+		};
+		0CEDECA728B4E885001A406C /* HeroViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C3CE14228B3B3DC00F117AA /* Heros.swift */,
+				0C3CE14028B3B1B200F117AA /* HeroCollectionViewCell.swift */,
+			);
+			name = HeroViewCell;
+			sourceTree = "<group>";
+		};
+		0CEDECA828B4E8A1001A406C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0CEDECA928B4E8D1001A406C /* CategoryViewCell */,
+				0CEDECA728B4E885001A406C /* HeroViewCell */,
+				0CEDECA528B4E7C4001A406C /* CapsuleViewCell */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		0CEDECA928B4E8D1001A406C /* CategoryViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0CEDECAA28B4E8F2001A406C /* Categories.swift */,
+				0CEDECAC28B4E906001A406C /* CategoryCollectionViewCell.swift */,
+			);
+			name = CategoryViewCell;
+			sourceTree = "<group>";
+		};
+		0CEDECAE28B4FD93001A406C /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0CEDECB028B4FDC8001A406C /* Bahnschrift.ttf */,
+				0CEDECB128B4FDC8001A406C /* SegoeUI-VF.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +206,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CEDECB528B4FDC8001A406C /* SegoeUI-VF.ttf in Resources */,
 				0CE0609828B2332E0067E853 /* LaunchScreen.storyboard in Resources */,
 				0CE0609528B2332E0067E853 /* Assets.xcassets in Resources */,
 				0CE0609328B2332D0067E853 /* Main.storyboard in Resources */,
+				0CEDECB428B4FDC8001A406C /* Bahnschrift.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,8 +225,10 @@
 				0C3CE14128B3B1B200F117AA /* HeroCollectionViewCell.swift in Sources */,
 				0C7D7E2E28B3FD9C00344CAB /* CapsuleCollectionViewCell.swift in Sources */,
 				0C7D7E2C28B3FD3D00344CAB /* Capsules.swift in Sources */,
+				0CEDECAD28B4E906001A406C /* CategoryCollectionViewCell.swift in Sources */,
 				0CE0608C28B2332D0067E853 /* AppDelegate.swift in Sources */,
 				0C25D70528B2363900906CE9 /* Librarypage.swift in Sources */,
+				0CEDECAB28B4E8F2001A406C /* Categories.swift in Sources */,
 				0C25D70928B255B700906CE9 /* Homepage.swift in Sources */,
 				0C25D70328B2362500906CE9 /* Searchpage.swift in Sources */,
 				0CE0608E28B2332D0067E853 /* SceneDelegate.swift in Sources */,

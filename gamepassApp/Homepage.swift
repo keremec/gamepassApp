@@ -13,8 +13,11 @@ class Homepage: UIViewController {
     
     @IBOutlet weak var CapsuleCollectionView: UICollectionView!
     
+    @IBOutlet weak var CategoryCollectionView: UICollectionView!
+    
     var HeroList = [Heros]()
     var CapsuleList = [Capsules]()
+    var CategoryList = [Categories]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +69,36 @@ class Homepage: UIViewController {
         capsuleDesign.minimumLineSpacing = 15
         CapsuleCollectionView.isPagingEnabled = false
         CapsuleCollectionView.collectionViewLayout = capsuleDesign
+        
+        
+        // Category Collection View
+        CategoryCollectionView.delegate = self
+        CategoryCollectionView.dataSource = self
+        let cat1 = Categories(CategoryId: 1, CategoryTitle: "INDIE",CategoryColor: "#008745ff", CategoryImgName: "tips_and_updates-tips_and_updates_symbol")
+        let cat2 = Categories(CategoryId: 2, CategoryTitle: "FAMILY",CategoryColor: "#008745ff", CategoryImgName: "family_restroom-family_restroom_symbol")
+        let cat3 = Categories(CategoryId: 3, CategoryTitle: "CLASSICS",CategoryColor: "#038572ff", CategoryImgName: "videogame_asset-videogame_asset_symbol")
+        let cat4 = Categories(CategoryId: 4, CategoryTitle: "SHOOTER",CategoryColor: "#038572ff", CategoryImgName: "adjust-adjust_symbol")
+        let cat5 = Categories(CategoryId: 5, CategoryTitle: "SPORTS",CategoryColor: "#007c8eff", CategoryImgName: "sports_football-sports_football_symbol")
+        let cat6 = Categories(CategoryId: 6, CategoryTitle: "ADVENTURE",CategoryColor: "#007c8eff", CategoryImgName: "sailing-sailing_symbol")
+        let cat7 = Categories(CategoryId: 7, CategoryTitle: "PLATFORM",CategoryColor: "#006f98ff", CategoryImgName: "nature-nature_symbol")
+        let cat8 = Categories(CategoryId: 8, CategoryTitle: "FIGHTING",CategoryColor: "#006f98ff", CategoryImgName: "sports_mma-sports_mma_symbol")
+
+        let categoryDesign = UICollectionViewFlowLayout()
+        categoryDesign.scrollDirection = .vertical
+        categoryDesign.sectionInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+        categoryDesign.minimumInteritemSpacing = 1
+        categoryDesign.itemSize = CGSize(width: width * 0.45, height: width * 0.2)
+        CategoryCollectionView.collectionViewLayout = categoryDesign
+        CategoryCollectionView.isScrollEnabled = false
+        
+        CategoryList.append(cat1)
+        CategoryList.append(cat2)
+        CategoryList.append(cat3)
+        CategoryList.append(cat4)
+        CategoryList.append(cat5)
+        CategoryList.append(cat6)
+        CategoryList.append(cat7)
+        CategoryList.append(cat8)
     }
 
 }
@@ -81,6 +114,9 @@ extension Homepage : UICollectionViewDelegate, UICollectionViewDataSource{
             
         case CapsuleCollectionView:
             return CapsuleList.count
+            
+        case CategoryCollectionView:
+            return CategoryList.count
             
         default:
             return 0
@@ -114,6 +150,16 @@ extension Homepage : UICollectionViewDelegate, UICollectionViewDataSource{
             cell.layer.cornerRadius = 10.0
             
             return cell
+          
+        case CategoryCollectionView:
+            let category = CategoryList[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! CategoryCollectionViewCell
+            cell.labelSpec.text = category.CategoryTitle!
+            cell.imageSpec.image = UIImage(named: category.CategoryImgName!)
+            
+            cell.layer.cornerRadius = 5.0
+            cell.backgroundColor = UIColor(hex: category.CategoryColor!)
+            return cell
             
         default:
             return UICollectionViewCell()
@@ -122,4 +168,33 @@ extension Homepage : UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
     
+}
+
+
+extension UIColor {
+    public convenience init?(hex: String) {
+        let r, g, b, a: CGFloat
+
+        if hex.hasPrefix("#") {
+            let start = hex.index(hex.startIndex, offsetBy: 1)
+            let hexColor = String(hex[start...])
+
+            if hexColor.count == 8 {
+                let scanner = Scanner(string: hexColor)
+                var hexNumber: UInt64 = 0
+
+                if scanner.scanHexInt64(&hexNumber) {
+                    r = CGFloat((hexNumber & 0xff000000) >> 24) / 255
+                    g = CGFloat((hexNumber & 0x00ff0000) >> 16) / 255
+                    b = CGFloat((hexNumber & 0x0000ff00) >> 8) / 255
+                    a = CGFloat(hexNumber & 0x000000ff) / 255
+
+                    self.init(red: r, green: g, blue: b, alpha: a)
+                    return
+                }
+            }
+        }
+
+        return nil
+    }
 }
